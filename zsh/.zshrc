@@ -1,6 +1,6 @@
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 
 alias vi="nvim"
 alias vim="nvim"
@@ -16,6 +16,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 # using starship instead of powerlevel
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # echo ".zshrc is loaded"

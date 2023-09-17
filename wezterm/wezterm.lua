@@ -2,11 +2,11 @@
 local wezterm = require("wezterm")
 local c = wezterm.config_builder()
 
-local act = wezterm.action
-
 require("keys").apply(c)
 
 c.font = wezterm.font_with_fallback({
+  "MesloLGS NF",
+  "JetBrainsMono Nerd Font",
   "Berkeley Mono",
   "JetBrains Mono",
   "Symbols Nerd Font",
