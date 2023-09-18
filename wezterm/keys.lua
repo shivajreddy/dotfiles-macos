@@ -48,6 +48,12 @@ local changeCtpFlavor = act.InputSelector({
   end),
 })
 
+
+--use 'CMD' + 'y' to clear the scrollback and viewport
+map('y', "CMD", act.ClearScrollback('ScrollbackAndViewport'))
+--map('y', "CMD", act.ClearScrollback('ScrollbackOnly'))
+
+
 -- use 'Backslash' to split horizontally
 map("\\", "LEADER", act.SplitHorizontal({ domain = "CurrentPaneDomain" }))
 -- and 'Minus' to split vertically
@@ -138,7 +144,8 @@ M.apply = function(c)
   c.leader = {
     key = "s",
     mods = "CTRL",
-    timeout_milliseconds = math.maxinteger,
+    --timeout_milliseconds = math.maxinteger,
+    timeout_milliseconds = 1000,
   }
   c.keys = shortcuts
   c.disable_default_key_bindings = true
