@@ -10,7 +10,7 @@
 # https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
 ###
 
-# P R E - C O N F I G
+# P R E - C O N F I G (with SIP disabled)
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
@@ -30,11 +30,8 @@ yabai -m config window_gap                   10
 
 
 # S P A C I N G   F O R   S K E T C H T B A R
-# 20 -top padding, 0 bot padding of all spaces in main display
-#yabai -m config external_bar main:28:0
-# 20 top padding, 20 bot padding of all spaces - on all displays
-#yabai -m config external_bar all:28:0
-
+# yabai -m config external_bar <"main" or "all">:<top-padding>:<bot-padding> 
+yabai -m config external_bar all:22:0
 
 # G L O B A L   S E T T I N G S
 yabai -m config window_placement             second_child
@@ -44,7 +41,7 @@ yabai -m config window_animation_duration    0.0
 yabai -m config window_shadow                on
 yabai -m config window_border                on
 yabai -m config window_border_blur           off
-yabai -m config window_border_width          4
+yabai -m config window_border_width          2
 yabai -m config active_window_border_color   0xffb4befe
 
 
@@ -52,5 +49,6 @@ yabai -m config active_window_border_color   0xffb4befe
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
+yabai -m rule --add app="^Spotica$" manage=off
 yabai -m rule --add label="PyCharm" app="^PyCharm$" title=".*(Interpreter|Config|Settings).*" manage=off
 

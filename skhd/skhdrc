@@ -2,8 +2,8 @@
 
 # change layout of desktop
 # toggle between float and binary-space-partition mode
-alt + cmd - e : yabai -m space --layout bsp     # e as in even spacing
-alt + cmd - f : yabai -m space --layout float   # f as in float
+alt + shift - b : yabai -m space --layout bsp     # b as in bsp 
+alt + shift - f : yabai -m space --layout float   # f as in float
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -97,7 +97,7 @@ alt - d : yabai -m window --toggle zoom-parent
 alt - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window border
-shift + alt - b : yabai -m window --toggle border
+alt + ctrl - b : yabai -m window --toggle border
 
 # toggle window split type
 alt - e : yabai -m window --toggle split
