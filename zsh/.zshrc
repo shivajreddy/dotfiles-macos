@@ -7,6 +7,7 @@ alias vim="nvim"
 alias py="python3"
 alias python="python3"
 alias pva="source venv/bin/activate"
+alias pip="python3 -m pip"
 
 
 plugins=(git

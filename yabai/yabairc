@@ -4,11 +4,6 @@
 ####   Shiva Reddy  ####
 ########################
 
-### Finish this setup to get all advanced features of yabai
-# 0. disable SIP
-# 1. Instal yabai (latest release) finish all instructions on github
-# https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
-###
 
 # P R E - C O N F I G (with SIP disabled)
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
@@ -16,8 +11,8 @@ sudo yabai --load-sa
 
 
 # S K E T C H Y B A R  E V E N T S
-yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
-yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
+# yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
+# yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
 
 
 # G E N E R A L   S P A C E   S E T T I N G S
@@ -31,10 +26,10 @@ yabai -m config window_gap                   10
 
 # S P A C I N G   F O R   S K E T C H T B A R
 # yabai -m config external_bar <"main" or "all">:<top-padding>:<bot-padding> 
-yabai -m config external_bar all:22:0
+# yabai -m config external_bar all:0:25
 
 # G L O B A L   S E T T I N G S
-yabai -m config window_placement             second_child
+# yabai -m config window_placement             second_child
 yabai -m config auto_balance                 on
 yabai -m config window_opacity_duration      0.0
 yabai -m config window_animation_duration    0.0
@@ -49,6 +44,10 @@ yabai -m config active_window_border_color   0xffb4befe
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
-yabai -m rule --add app="^Spotica$" manage=off
-yabai -m rule --add label="PyCharm" app="^PyCharm$" title=".*(Interpreter|Config|Settings).*" manage=off
+yabai -m rule --add app="^FaceTime$" manage=off border=off
+yabai -m rule --add app="^WhatsApp$" manage=off
+yabai -m rule --add app="^Screen Sharing$" manage=off
+yabai -m rule --add label="PyCharm" app="^PyCharm$" title=".*(Interpreter|Config|Settings|Delete).*" manage=off
+yabai -m rule --add label="WebStorm" app="^WebStorm$" title=".*(Interpreter|Config|Settings|Delete).*" manage=off
+yabai -m rule --add label="RustRover-EAP" app="^RustRover-EAP$" title=".*(Interpreter|Config|Settings|Delete).*" manage=off
 
